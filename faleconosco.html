@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Site Imobiliária</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <style>
+    body {
+      background-image: url(/img//pexels-binyamin-mellish-106399.jpg)
+    }
+  </style>
+
+  <title>Bordas Arredondadas com CSS</title>
+  <style type="text/css">
+    img {
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="/img/path3605.png" alt="logo" height="160px" width="125px" position="center">
+    <nav>
+        <ul>
+            <li><a class="menu-link" href="index.html">Busca de Imóveis</a></li>
+            <li><a class="menu-link" href="empresa.html">A Empresa</a></li>
+            <li><a class="menu-link" href="documentacao.html">Documentação</a></li>
+            <li><a class="menu-link" href="faleconosco.html">Fale Conosco</a></li>
+        </ul>        
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Entre em contato conosco</h1>
+    <section class="contact-form">
+      <form id="contactForm" action="#" method="post">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Telefone:</label>
+        <input type="phone" id="phone" name="phone" required />
+
+        <label for="message">Mensagem:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <section class="contact-info">
+      <p><i class="fas fa-map-marker-alt"></i> Endereço: R. Irênio Greco, 4580 - Vila Imperador, Franca - SP, 14405-1913</p>
+      <p><i class="fas fa-phone"></i> Telefone: (16) 3322-7474</p>
+      <p><i class="far fa-envelope"></i> Email: contato@imobiliariaconfianca.com</p>
+    </section>
+  </div>
+
+  <div class="chat-widget">
+    <i class="fas fa-comments chat-icon"></i>
+    <span class="chat-text">Chat Online</span>
+  </div>
+
+  <footer>
+    <img src="/img/Logo.jpeg" alt="logo" height="61px" width="160px">
+  </footer>
+
+</body>
+
+</html>
