@@ -72,6 +72,49 @@ a:hover {
     padding: 10px 50px;
 }
 
+.search {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.search h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#searchForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+span {
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+
 .featured-products {
     display: flex;
     justify-content: center;
@@ -111,7 +154,7 @@ label {
 
 input[type="text"],
 input[type="email"],
-input[type="phone"],
+input[type="tel"],
 textarea {
     width: 95%;
     padding: 10px;
@@ -164,4 +207,3 @@ button[type="submit"] {
 .chat-text {
     font-weight: bold;
 }
-
