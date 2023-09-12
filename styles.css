@@ -182,8 +182,8 @@ button[type="submit"] {
 }
 
 .chat-widget {
-    position: absolute;
-    bottom: 0;
+    position: fixed;
+    bottom: 90px;
     right: 20px;
     background-color: #333;
     color: #fff;
