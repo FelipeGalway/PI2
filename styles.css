@@ -77,6 +77,15 @@ a:hover {
     padding: 10px 50px;
 }
 
+.teste {
+    padding: 50px;
+}
+
+.teste:hover {
+    background-color: #f5f5f5; 
+    padding: 50px 50px;
+}
+
 .search {
     padding: 20px;
     border-radius: 10px;
