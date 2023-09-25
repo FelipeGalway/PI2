@@ -3,6 +3,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1 {
@@ -41,7 +44,7 @@ header {
 
 header ul li {
     display: inline;
-    margin-right: 20px;
+    margin-left: 30px;
 }
 
 header a {
@@ -49,6 +52,7 @@ header a {
     color: #fff;
     padding: 50px;
     font-size: larger;
+    
 }
 
 nav ul {
@@ -59,12 +63,13 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    
 }
 
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
+    
 }
 
 a:hover {
@@ -100,6 +105,7 @@ label {
 
 input[type="text"],
 input[type="number"],
+input[type="password"],
 select {
     width: 100%;
     padding: 10px;
@@ -129,11 +135,21 @@ span {
 
 }
 
+#login {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 350px;
+    margin-top: 70px;
+    margin-left: 50px; 
+}
+
 footer {
     text-align: center;
     background-color: #72729d;
     color: #fff;
     padding: 10px 0;
+    margin-top: auto;
 }
 
 .contact-form {
