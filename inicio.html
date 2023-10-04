@@ -31,62 +31,63 @@
     <div id="carousel-container">
         <div id="carousel">
             <div class="property">
-                <img src="/img/pexels-binyamin-mellish-106399.jpg" alt="Imóvel 1" height="200px">
+                <img src="/img/pexels-binyamin-mellish-106399.jpg" alt="Imóvel 1" height="250px" width="600px">
                 <h3>Imóvel 1</h3>
                 <p>Descrição do imóvel 1.</p>
             </div>
             <div class="property">
-                <img src="/img/pexels-max-rahubovskiy-7031607.jpg" alt="Imóvel 2">
+                <img src="/img/pexels-max-rahubovskiy-7031607.jpg" alt="Imóvel 2" height="250px" width="600px">
                 <h3>Imóvel 2</h3>
                 <p>Descrição do imóvel 2.</p>
             </div>
             <div class="property">
-                <img src="/img/pexels-photo-1029599.jpeg" alt="Imóvel 3">
+                <img src="/img/pexels-photo-1029599.jpeg" alt="Imóvel 3" height="250px" width="600px">
                 <h3>Imóvel 3</h3>
                 <p>Descrição do imóvel 3.</p>
             </div>
             <div class="property">
-                <img src="/img/pexels-photo-1396132.jpeg" alt="Imóvel 4">
+                <img src="/img/pexels-photo-1396132.jpeg" alt="Imóvel 4" height="250px" width="600px">
                 <h3>Imóvel 4</h3>
                 <p>Descrição do imóvel 4.</p>
             </div>
             <div class="property">
-                <img src="/img/pexels-photo-2587054.jpeg" alt="Imóvel 5">
+                <img src="/img/pexels-photo-2587054.jpeg" alt="Imóvel 5" height="250px" width="600px">
                 <h3>Imóvel 5</h3>
                 <p>Descrição do imóvel 5.</p>
             </div>
             <div class="property">
-                <img src="/img/pexels-photo-3316924.webp" alt="Imóvel 6">
+                <img src="/img/pexels-photo-3316924.webp" alt="Imóvel 6" height="250px" width="600px">
                 <h3>Imóvel 6</h3>
                 <p>Descrição do imóvel 6.</p>
             </div>
             <div class="property">
-                <img src="/img/pexels-photo-3990589.jpeg" alt="Imóvel 7">
+                <img src="/img/pexels-photo-3990589.jpeg" alt="Imóvel 7" height="250px" width="600px">
                 <h3>Imóvel 7</h3>
                 <p>Descrição do imóvel 7.</p>
             </div>
             <div class="property">
-                <img src="/img/pexels-photo-4258275.jpeg" alt="Imóvel 8">
+                <img src="/img/pexels-photo-4258275.jpeg" alt="Imóvel 8" height="250px" width="600px">
                 <h3>Imóvel 8</h3>
                 <p>Descrição do imóvel 8.</p>
             </div>
             <div class="property">
-                <img src="/img/pexels-photo-430216.jpeg" alt="Imóvel 9">
+                <img src="/img/lafayette-park-washington-dc-c-architecture-161768.jpeg" alt="Imóvel 9" height="250px"
+                    width="600px">
                 <h3>Imóvel 9</h3>
                 <p>Descrição do imóvel 9.</p>
             </div>
-            
         </div>
+
+        <div class="carousel-arrow carousel-arrow-left" onclick="prevSlide()">&#8249;</div>
+        <div class="carousel-arrow carousel-arrow-right" onclick="nextSlide()">&#8250;</div>
+
     </div>
-
-    <a class="teste" href="inicio.html">Realize a Busca de seu Imóvel</a>
-
 
     <footer>
         <img src="/img/Logo.jpeg" alt="logo" height="61px" width="160px">
     </footer>
 
-    <script>
+    <script>        
         const carousel = document.getElementById('carousel');
         const properties = document.querySelectorAll('.property');
         let currentIndex = 0;
@@ -95,12 +96,28 @@
             carousel.style.transform = `translateX(-${currentIndex * 320}px)`;
         }
 
-        setInterval(() => {
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + properties.length) % properties.length;
+            updateCarousel();
+        }
+
+        function nextSlide() {
             currentIndex = (currentIndex + 1) % properties.length;
             updateCarousel();
-        }, 3000);
+        }
+
+        updateCarousel();
     </script>
 
 </body>
+
+</html>
+
+
+
+
+
+
+
 
 </html>
