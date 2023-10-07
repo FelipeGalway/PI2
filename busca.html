@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Site Imobiliária</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Bordas Arredondadas com CSS</title>
+    <style type="text/css">
+        img {
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <img src="/img/path3605.png" alt="logo" height="100px" width="78px" position="center">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="busca.html">Busca de Imóveis</a></li>
+                <li><a href="empresa.html">A Empresa</a></li>
+                <li><a href="documentacao.html">Documentação</a></li>
+                <li><a href="faleconosco.html">Fale Conosco</a></li>
+                <li><a href="login.html">Área do Cliente</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="search">
+        <h1>Encontre o Imóvel dos Seus Sonhos</h1>
+        <form id="searchForm" action="#" method="get">
+            <label for="location">Localização:</label>
+            <input type="text" id="location" name="location" placeholder="Digite a cidade ou bairro" required />
+
+            <label for="property-type">Tipo de Imóvel:</label>
+            <select id="property-type" name="property-type">
+                <option value="casa">Casa</option>
+                <option value="apartamento">Apartamento</option>
+                <option value="terreno">Terreno</option>
+                <option value="comercio">Salas Comerciais</option>
+            </select>
+
+            <label for="price-range">Faixa de Preço:</label>
+            <input type="number" id="price-range" name="price-range" placeholder="De" min="0" />
+
+            <span>até</span>
+
+            <input type="number" id="price-range-max" name="price-range-max" placeholder="Até" min="0" />
+
+            <button type="submit">Buscar</button>
+        </form>
+    </section>
+
+    <section class="search-results">
+        <!-- Aqui serão exibidos os resultados da busca de imóveis -->
+        <!-- Você pode usar JavaScript para preencher dinamicamente esta seção com os resultados da pesquisa -->
+    </section>
+
+    <footer>
+        <img src="/img/Logo.jpeg" alt="logo" height="61px" width="160px">
+    </footer>
+</body>
+
+</html>
