@@ -22,7 +22,7 @@
                 <li><a href="busca.html">Busca de Imóveis</a></li>
                 <li><a href="empresa.html">A Empresa</a></li>
                 <li><a href="documentacao.html">Documentação</a></li>
-                <li><a href="faleconosco.html">Fale Conosco</a></li>                
+                <li><a href="faleconosco.html">Fale Conosco</a></li>
                 <li><a href="login.html">Área do Cliente</a></li>
             </ul>
         </nav>
@@ -39,7 +39,7 @@
                 <option value="casa">Casa</option>
                 <option value="apartamento">Apartamento</option>
                 <option value="terreno">Terreno</option>
-                <option value="comercio">Salas Comerciais</option>
+                <option value="comercio">Sala Comercial</option>
             </select>
 
             <label for="price-range">Faixa de Preço:</label>
@@ -53,10 +53,65 @@
         </form>
     </section>
 
-    <section class="search-results">
-        <!-- Aqui serão exibidos os resultados da busca de imóveis -->
-        <!-- Você pode usar JavaScript para preencher dinamicamente esta seção com os resultados da pesquisa -->
-    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchForm = document.getElementById('searchForm');
+            const searchResults = document.querySelector('.search-results');
+
+            searchForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                searchResults.innerHTML = 'Carregando resultados...';
+
+                const location = document.getElementById('location').value;
+                const propertyType = document.getElementById('property-type').value;
+                const priceRange = document.getElementById('price-range').value;
+                const priceRangeMax = document.getElementById('price-range-max').value;
+
+                const queryParams = new URLSearchParams({
+                    location,
+                    propertyType,
+                    priceRange,
+                    priceRangeMax,
+                });
+
+                try {
+                    const response = await fetch(`/buscar-imoveis?${queryParams.toString()}`);
+                    const data = await response.json();
+                    displaySearchResults(data);
+                } catch (error) {
+                    searchResults.innerHTML = 'Ocorreu um erro ao buscar imóveis.';
+                }
+            });
+
+            function displaySearchResults(results) {
+                searchResults.innerHTML = '';
+
+                if (results.length === 0) {
+                    const noResultsMessage = document.createElement('div');
+                    noResultsMessage.classList.add('no-results-message');
+                    noResultsMessage.textContent = 'Nenhum imóvel encontrado com os critérios selecionados.';
+                    searchResults.appendChild(noResultsMessage);
+                    return;
+                }
+
+                results.forEach((imovel) => {
+                    const propertyDiv = document.createElement('div');
+                    propertyDiv.classList.add('property');
+                    propertyDiv.innerHTML = `
+        <img src="${imovel.imagem}" alt="${imovel.nome}">
+        <h3>${imovel.nome}</h3>
+        <p>${imovel.descricao}</p>
+        <p><strong>Preço:</strong> R$ ${imovel.preco}</p>
+        <p><strong>Endereço:</strong> ${imovel.endereco}</p>
+      `;
+                    searchResults.appendChild(propertyDiv);
+                });
+            }
+        });
+
+    </script>
+
+    <section class="search-results"></section>
 
     <footer>
         <img src="/img/Logo.jpeg" alt="logo" height="61px" width="160px">
