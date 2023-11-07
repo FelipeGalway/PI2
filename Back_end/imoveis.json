@@ -50,7 +50,7 @@
       "descricao": "Esta sala moderna e bem-iluminada está localizada em um prestigiado centro empresarial no coração da cidade, oferecendo acesso conveniente a importantes centros financeiros.",
       "preco": 400000,
       "endereco": "Rua Aragorn, nº 87, Bairro Gondor, Fortaleza/CE",
-      "tipo": "sala comercial",
+      "tipo": "comercio",
       "imagem": "/img/pexels-photo-3316924.webp"
     },
     {
@@ -69,7 +69,7 @@
       "preco": 800000,
       "endereco": "Rua William Wallace, nº 7, Bairro Coração Valente, Rio de Janeiro/RJ",
       "tipo": "casa",
-      "imagem": "/img/lafayette-park-washington-dc-c-architecture-161768.jpeg"
+      "imagem": "/img/pexels-photo-4258275.jpeg"
     },
     {
       "id": 9,
@@ -78,7 +78,7 @@
       "preco": 500000,
       "endereco": "Rua Máximus Décimus Meridius, nº 1, Bairro Coliseu, Manaus/AM",
       "tipo": "apartamento",
-      "imagem": "/img/pexels-photo-4258275.jpeg"
+      "imagem": "/img/lafayette-park-washington-dc-c-architecture-161768.jpeg"
     }
   ]
   
