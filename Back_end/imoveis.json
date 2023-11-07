@@ -1,0 +1,84 @@
+[
+    {
+      "id": 1,
+      "nome": "Loft Urbano com Design Industrial",
+      "descricao": "Este loft de estilo industrial possui teto alto, grandes janelas e um espaço aberto perfeito para quem aprecia um design contemporâneo.",
+      "preco": 900000,
+      "endereco": "Rua Don Vito Corleone, nº 100, Bairro Poderoso Chefão, Franca/SP",
+      "tipo": "casa",
+      "imagem": "/img/pexels-binyamin-mellish-106399.jpg"
+    },
+    {
+      "id": 2,
+      "nome": "Residência Espaçosa com Piscina",
+      "descricao": "Uma casa espaçosa com 4 quartos, uma piscina refrescante e um elegante conceito aberto para momentos memoráveis em família.",
+      "preco": 1500000,
+      "endereco": "Rua dos Pokémons, nº 10, Bairro Pallet, Belo Horizonte/MG",
+      "tipo": "casa",
+      "imagem": "/img/pexels-max-rahubovskiy-7031607.jpg"
+    },
+    {
+      "id": 3,
+      "nome": "Chalé Rústico em Local Tranquilo",
+      "descricao": "Este chalé rústico oferece 2 quartos aconchegantes e está situado em um ambiente tranquilo cercado pela natureza.",
+      "preco": 500000,
+      "endereco": "Rua dos Alfeneiros, nº 4, Bairro Hogwarts, São Paulo/SP",
+      "tipo": "casa",
+      "imagem": "/img/pexels-photo-1029599.jpeg"
+    },
+    {
+      "id": 4,
+      "nome": "Casa Sustentável com Energia Solar",
+      "descricao": "Uma casa ecológica com 3 quartos, painéis solares, jardim de chuva e recursos eficientes em termos de energia.",
+      "preco": 1200000,
+      "endereco": "Rua Tolkien, nº 9731, Bairro Terra Média, Brasília/DF",
+      "tipo": "casa",
+      "imagem": "/img/pexels-photo-1396132.jpeg"
+    },
+    {
+      "id": 5,
+      "nome": "Mansão de Luxo à Beira-Mar",
+      "descricao": "Uma mansão espetacular à beira-mar com 5 quartos, piscina infinita e acesso privativo à praia.",
+      "preco": 2500000,
+      "endereco": "Rua Pelé, nº 10, Bairro Vila Belmiro, Santos/SP",
+      "tipo": "casa",
+      "imagem": "/img/pexels-photo-2587054.jpeg"
+    },
+    {
+      "id": 6,
+      "nome": "Sala Comercial no Centro Empresarial",
+      "descricao": "Esta sala moderna e bem-iluminada está localizada em um prestigiado centro empresarial no coração da cidade, oferecendo acesso conveniente a importantes centros financeiros.",
+      "preco": 400000,
+      "endereco": "Rua Aragorn, nº 87, Bairro Gondor, Fortaleza/CE",
+      "tipo": "sala comercial",
+      "imagem": "/img/pexels-photo-3316924.webp"
+    },
+    {
+      "id": 7,
+      "nome": "Casa Aconchegante de 2 Quartos",
+      "descricao": "Esta casa encantadora oferece 2 quartos amplos, uma cozinha moderna e um jardim privativo perfeito para relaxar.",
+      "preco": 600000,
+      "endereco": "Rua Ned Stark, nº 2, Bairro Winterfell, Porto Alegre/RS",
+      "tipo": "casa",
+      "imagem": "/img/pexels-photo-3990589.jpeg"
+    },
+    {
+      "id": 8,
+      "nome": "Casa Charmosa com Jardim Exuberante",
+      "descricao": "Uma casa charmosa com 3 quartos, lindos detalhes arquitetônicos e um jardim exuberante nos fundos para os amantes da natureza.",
+      "preco": 800000,
+      "endereco": "Rua William Wallace, nº 7, Bairro Coração Valente, Rio de Janeiro/RJ",
+      "tipo": "casa",
+      "imagem": "/img/lafayette-park-washington-dc-c-architecture-161768.jpeg"
+    },
+    {
+      "id": 9,
+      "nome": "Apartamento Moderno no Centro da Cidade",
+      "descricao": "Este apartamento contemporâneo de 1 quarto está localizado no coração da cidade, proporcionando acesso conveniente a todas as comodidades urbanas.",
+      "preco": 500000,
+      "endereco": "Rua Máximus Décimus Meridius, nº 1, Bairro Coliseu, Manaus/AM",
+      "tipo": "apartamento",
+      "imagem": "/img/pexels-photo-4258275.jpeg"
+    }
+  ]
+  
