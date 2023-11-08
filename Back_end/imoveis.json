@@ -79,6 +79,60 @@
       "endereco": "Rua Máximus Décimus Meridius, nº 1, Bairro Coliseu, Manaus/AM",
       "tipo": "apartamento",
       "imagem": "/img/lafayette-park-washington-dc-c-architecture-161768.jpeg"
+    },
+    {
+      "id": 10,
+      "nome": "Apartamento Luxuoso no Bairro Nobre",
+      "descricao": "Este luxuoso apartamento de 2 quartos está situado em um bairro nobre da cidade, oferecendo um estilo de vida sofisticado. Aprecie o conforto e a elegância neste espaço moderno.",
+      "preco": 700000,
+      "endereco": "Rua Darth Vader, nº 666, Bairro Estrela da Morte, Franca/SP",
+      "tipo": "apartamento",
+      "imagem": "/img/pexels-leah-kelley-2090651.jpg"
+    },
+    {
+      "id": 11,
+      "nome": "Apartamento Charmoso no Centro Histórico",
+      "descricao": "Este charmoso apartamento de 1 quarto está situado no centro histórico da cidade, oferecendo uma mistura única de encanto antigo e comodidades modernas. Explore a rica herança cultural da região a partir desta localização conveniente.",
+      "preco": 650000,
+      "endereco": "Rua Luke Skywalker, nº 70, Bairro Tatooine, Ribeirão Preto/SP",
+      "tipo": "apartamento",
+      "imagem": "/img/pexels-luis-quintero-2111768.jpg"
+    },
+    {
+      "id": 12,
+      "nome": "Apartamento com Vista Panorâmica para o Oceano",
+      "descricao": "Desfrute de vistas deslumbrantes do oceano neste espaçoso apartamento de 3 quartos. Localizado à beira-mar, você se sentirá cercado pela beleza natural enquanto desfruta de comodidades urbanas de classe mundial.",
+      "preco": 850000,
+      "endereco": "Rua Turco Fraco, nº 4, Bairro Ana Paula, Guarujá/SP",
+      "tipo": "apartamento",
+      "imagem": "/img/pexels-jovydas-dobilas-2462015.jpg"
+    },
+    {
+      "id": 13,
+      "nome": "Sala Comercial no Centro Financeiro da Cidade",
+      "descricao": "Esta sala comercial elegante e bem iluminada está localizada no coração do distrito financeiro da cidade. É o local perfeito para empresas que buscam uma localização central e prestígio.",
+      "preco": 250000,
+      "endereco": "Rua Lebron James, nº 23, Bairro Los Angeles, Rio de Janeiro/RJ",
+      "tipo": "comercio",
+      "imagem": "/img/pexels-bali-demiri-3801167.jpg"
+    },
+    {
+      "id": 14,
+      "nome": "Sala Comercial na Zona de Alta Tecnologia",
+      "descricao": "Localizada em uma zona de alta tecnologia, esta sala comercial é perfeita para empresas que buscam um ambiente inovador. Com infraestrutura de última geração, é um local propício para o crescimento.",
+      "preco": 350000,
+      "endereco": "Rua Gandalf o Cinzento, nº 1, Bairro Gondor, São Paulo/SP",
+      "tipo": "comercio",
+      "imagem": "/img/pexels-marc-mueller-380769.jpg"
+    },
+    {
+      "id": 15,
+      "nome": "Sala Comercial em um Arranha-Céu Corporativo",
+      "descricao": "Esta sala comercial está localizada em um arranha-céu corporativo no centro da cidade, proporcionando uma presença empresarial impressionante. Desfrute de instalações de primeira classe e uma localização estratégica.",
+      "preco": 300000,
+      "endereco": "Rua Vegeta, nº 2, Bairro Kakarotto, Franca/SP",
+      "tipo": "comercio",
+      "imagem": "img/pexels-pixabay-416320.jpg"
     }
   ]
   
