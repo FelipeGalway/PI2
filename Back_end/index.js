@@ -38,6 +38,31 @@ app.get('/buscar-imoveis', (req, res) => {
   res.json(resultados); 
 });
 
+app.post('/cadastrar-usuario', async (req, res) => {
+  try {
+    const { name, username, cpf, email, address, tel, password } = req.body;
+
+    const query =
+      "INSERT INTO Usuarios (nome, nome_usuario, cpf, email, endereco, telefone, senha) VALUES (@nome, @nome_usuario, @cpf, @email, @endereco, @telefone, @senha)";
+
+    const request = pool.request();
+    request.input('nome', sql.VarChar, name);
+    request.input('nome_usuario', sql.VarChar, username);
+    request.input('cpf', sql.VarChar, cpf);
+    request.input('email', sql.VarChar, email);
+    request.input('endereco', sql.VarChar, address);
+    request.input('telefone', sql.VarChar, tel);
+    request.input('senha', sql.VarChar, password);
+
+    const result = await request.query(query);
+
+    res.status(200).json({ message: 'Usuário cadastrado com sucesso!' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Erro ao cadastrar usuário.' });
+  }  
+});
+
 app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}`);
 });
