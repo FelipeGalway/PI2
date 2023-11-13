@@ -4,6 +4,10 @@ const port = 3000;
 const path = require('path');
 const imoveis = require('./imoveis.json');
 const sql = require('mssql/msnodesqlv8')
+const bodyParser = require("body-parser");
+
+
+app.use(bodyParser.urlencoded({ extended: false }));
 
 const pool = new sql.ConnectionPool({
   database: 'PI',
