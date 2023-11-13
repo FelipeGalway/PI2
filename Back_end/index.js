@@ -6,7 +6,6 @@ const imoveis = require('./imoveis.json');
 const sql = require('mssql/msnodesqlv8')
 const bodyParser = require("body-parser");
 
-
 app.use(bodyParser.urlencoded({ extended: false }));
 
 const pool = new sql.ConnectionPool({
@@ -60,11 +59,36 @@ app.post('/cadastrar-usuario', async (req, res) => {
 
     const result = await request.query(query);
 
-    res.status(200).json({ message: 'Usuário cadastrado com sucesso!' });
+    res.status(200).json({ message: 'Usuário(a) cadastrado(a) com sucesso!' });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: 'Erro ao cadastrar usuário.' });
+    res.status(500).json({ error: 'Erro ao cadastrar usuário(a).' });
   }  
+});
+
+app.post('/login', async (req, res) => {
+  try {
+    const { username, password } = req.body;
+
+    const query =
+      "SELECT * FROM Usuarios WHERE nome_usuario = @nome_usuario AND senha = @senha";
+
+    const request = pool.request();
+    request.input('nome_usuario', sql.VarChar, username);
+    request.input('senha', sql.VarChar, password);
+
+    const result = await request.query(query);
+
+    if (result.recordset.length > 0) {
+      const user = result.recordset[0];
+      res.status(200).json({ message: `Bem-vindo(a), ${user.nome_usuario}!` });
+    } else {
+      res.status(401).json({ error: 'Usuário(a) ou senha inválidos.' });
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Erro ao realizar login.' });
+  }
 });
 
 app.listen(port, () => {
