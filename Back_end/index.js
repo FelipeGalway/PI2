@@ -91,6 +91,58 @@ app.post('/login', async (req, res) => {
   }
 });
 
+app.post('/atualizar-usuario', async (req, res) => {
+  try {
+    const { nameAtualizacao, usernameAtualizacao, cpfAtualizacao, emailAtualizacao, addressAtualizacao, telAtualizacao, passwordAtualizacao } = req.body;
+
+    const query =
+      "UPDATE Usuarios SET nome = @nome, nome_usuario = @nome_usuario, email = @email, endereco = @endereco, telefone = @telefone, senha = @senha WHERE cpf = @cpf";
+
+    const request = pool.request();
+    request.input('nome', sql.VarChar, nameAtualizacao);
+    request.input('nome_usuario', sql.VarChar, usernameAtualizacao);
+    request.input('cpf', sql.VarChar, cpfAtualizacao);
+    request.input('email', sql.VarChar, emailAtualizacao);
+    request.input('endereco', sql.VarChar, addressAtualizacao);
+    request.input('telefone', sql.VarChar, telAtualizacao);
+    request.input('senha', sql.VarChar, passwordAtualizacao);    
+
+    const result = await request.query(query);
+
+    if (result.rowsAffected[0] > 0) {
+      res.status(200).json({ message: 'Cadastro atualizado com sucesso!' });
+    } else {
+      res.status(404).json({ error: 'Usuário não encontrado.' });
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Erro ao atualizar cadastro.' });
+  }
+});
+
+app.post('/excluir-usuario', async (req, res) => {
+  try {
+    const { cpfExclusao } = req.body;
+
+    const query = "DELETE FROM Usuarios WHERE cpf = @cpf";
+
+    const request = pool.request();
+    request.input('cpf', sql.VarChar, cpfExclusao);
+
+    const result = await request.query(query);
+
+    if (result.rowsAffected[0] > 0) {
+      res.status(200).json({ message: 'Conta excluída com sucesso!' });
+    } else {
+      res.status(404).json({ error: 'Usuário não encontrado.' });
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Erro ao excluir conta.' });
+  }
+});
+
+
 app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}`);
 });

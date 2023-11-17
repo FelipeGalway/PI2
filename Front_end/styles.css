@@ -211,15 +211,15 @@ span {
     align-items: flex-start;
 }
 
-.login, .cadastro {
-    width: 45%;    
+.login, .cadastro, .atualizar-cadastro, .excluir-conta {
+    width: 25%;    
 }
 
-#login, #cadastro {
+#login, #cadastro, #atualizar-cadastro, #excluir-conta {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    max-width: 350px;
+    max-width: 320px;
     margin-top: 70px;
     margin-left: 50px;
     margin-bottom: 40px;
